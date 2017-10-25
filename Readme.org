@@ -1,2 +1,5 @@
-* Understanding Reference Types in Scala
-Hi.
+* Understanding kinds of references in Scala
+What are the differences in saying
+~def df = 2~ or
+~val vl = 2~ or
+~var vr = 2~ ?
