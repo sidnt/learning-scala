@@ -1,5 +1,36 @@
+#+TITLE: Kinds of references in Scala
+
 * Understanding kinds of references in Scala
-What are the differences in saying
-~def df = 2~ or
-~val vl = 2~ or
-~var vr = 2~ ?
+What are the differences between saying ~def df = 2~ or ~val vl = 2~ or ~var vr = 2~ ?
+
+* Ch32 Futures & Concurrency
+
+Whether it's instruction or data, it is data eventually. It's whether we interpret it as either that produces different cases. Can I say to the computer-spirit, I write a blob of code, (could be a literal as ~2~ or could be a computation as ~2*2~ 
+
+Methinks, once the code is compiled, that blob of code is stored somewhere in the runtime(either in the processor or memory) as data. And then I can also say to the computer spirit, either to evaluate that blob of code, or just treat it without evaluation.
+
+And I have a reference in my source code, to that blob of computation, which I use to express those cases, whether to compute it, or to treat it uncomputed.
+
+And then when I compute it, what happens? Let's say it's a successful computation
+
+** replay points
+- need to exploit multicore architecture
+- java's shortcomings
+- making a minimal future: ec and
+- probing a future
+- chaining operations
+- creating already completed futures
+  - from Try
+  -
+
+** Actor model
+- that messages may not arrive in the order they are actually sent
+  because there's a path to travel in between
+  and the time taken by each message to arrive
+  maybe nondeterministic
+- how does an actor start
+  like in the aml first example
+  dr.lewis told that the program was waiting
+- that context can't be referred on ActorRef
+  that it's available only on Actor itself
+* Keyboard 

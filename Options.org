@@ -1,0 +1,42 @@
+* Understanding the 'Option' ADT
+The algebra of error handling
+
+* Level -1
+We rely on the following primitive definitions:
+
+** Primitive
+Primitive connotes to the atomic / undivisible things in a domain.
+** Type
+Type is a collection of contracts.
+** Option
+** Algebra
+From Wikipedia
+
+In its most general form, algebra is the study of mathematical symbols and the rules for manipulating these symbols; it is a unifying thread of almost all of mathematics.
+
+** ADT
+Algebraic Data Type.
+
+
+
+* Our Creation
+Algebras are fabricated. That might be debatable. But 
+
+Until someone sees that pattern, and codifies it in an algebra. Someone saw a pattern in the ways we've been doing error handling all along, and codified it in the /Option/ algebra.
+
+* Instructions. Data.
+It helps to see the difference in essence implied. Computation, itself, has these two primitives. Any object in the computation (the abstract information science only, ie, only software) domain, is either an instruction or data. Or both/none?
+
+We can even see instructions as data. That is what a function-value is. It's upto our contextual interpretation to see that implied difference and act accordingly.
+
+* Rock, Paper, Scissor!
+We can interpret this game as an algebra. In this domain, we have defined some primitve objects and the RPS world is constructed on those primitives.
+
+As another example, the game of Chess. It has its primitives. There are primitive pieces, and then there are interaction rules between them. A pawn can only move like this, and a queen like this.
+
+In the RPS algebra, we have Rock, Paper, Scissor as primitive data, and the interaction between them as primitive instructions. So what are the primitive interactions between these domain objects. Well, just one, /against/. 
+
+And then there are rewrite rules. Rock /against/ Paper means Paper. And so on.
+
+** Algebras interact
+This RPS algebra can be programmed to interact with say, a betting algebra, where some friends pool in money and define some rules for disbursing rewards.
