@@ -1,13 +1,88 @@
-* Understanding the 'Option' ADT
-The algebra of error handling
+* Understanding the /Option/ Algebraic Data Type (ADT)
+The algebra of error handling.
+-----------------------------
+
+/Option/ is something understood intuitively thus, if I have an option of something, eventually, either i'll have it or not.
+
+But what is /Algebra/?
+
+* Algebra
+From Wikipedia
+
+/In its most general form, algebra is the study of mathematical symbols and the rules for manipulating these symbols;/
+
+Read that atleast thrice and let it sink in.
+
+** What is a symbol?
+We, collectively, evolve a symbol and agree on it to signify something, eg, `1` is a (written) symbol first, a number afterwards; `+` is a (written) symbol first. And it means addition on numbers, afterwards. Same goes for the sound we make for `1` and `+`, which are symbols made through sound. And so on. 
+
+Symbols get together to form newer symbols, and we assign newer meanings to newer symbols. How about `+1` or `1+` ?
+
+** What is a rule?
+In arithmetic, /+/ is a rule. It's a primitive method.
+
+Let's see some example algebras. 
+
+** Geometry - Algebra of Shapes, Sizes, Spatial Locations & Forms
+"the branch of mathematics concerned with the properties and relations of points, lines, surfaces, solids, and higher dimensional analogues."
+
+** Arithmetic - Algebra of Numbers
+"the branch of mathematics dealing with the properties and manipulation of numbers"
+
+** Rock, Paper, Scissors! - A fabricated algebra
+We can see this game as an algebra. Then we see what goes in the construction of an algebra, and if we already have an algebra construction, we can understand it by its symbols and rules.
+
+To fabricate the RPS world, we have Rock, Paper, Scissors as the primitive symbols, and the interaction between them as primitive methods. So what are the primitive interactions between these domain objects. Well, just one, /against/. And all the animation in this world is brought about this one method.
+
+In this algebra, we have defined some primitve symbols and the RPS world is constructed on those primitives.
+
+As another example, the game of Chess. It has its primitives. There are primitive pieces, and then there are interaction rules between them. A pawn can only move like this, and a queen like this.
+
+And then there are rewrite rules. Rock /against/ Paper means Paper. And so on.
+
+And then what might a /Data Type/ be?
+
+
+* Data Type
+
+* Data Structure
 
 * Level -1
 We rely on the following primitive definitions:
 
 ** Primitive
 Primitive connotes to the atomic / undivisible things in a domain.
+
+Probably, if you subdivide that atom further, descend down a layer of abstraction so to speak, you see primitives of those world. And this pattern of abstraction, probably exists infinitely (as good as infinity) in either directions.
+
+** Higher Level / Lower Level / Levels of Abstraction
+At a particular level of abstraction, the symbols in there are more like siblings to each other, than parent/child to each other.
+
+Symbols in a lower layer, are parents to those in the higher layer.
+
+** Interface / Implementation
+
+
 ** Type
-Type is a collection of contracts.
+Type is a collection of contracts. Things that hold for 1 object of type T, hold for all objects of type T, and all objects of any arbitrary subtype of T.
+
+So a subtype must implement all the contracts of its supertype. And then they also have their space to implement additional things.
+
+** Object
+First of all, it really not that impossible to bend our interpretation so some arbitrary thing, as some another arbitrary thing. EG, life is like a wind, or say life is like a tree. A type is an object in one perspective and the other way around in another.
+
+
+
+
+
+** Reference
+Basically an address. Additionally, we also ask, in statically typed languages, a reference is to what type.
+
+So if I give you my address, you can expect to find me there. And if I give an address of a local tea shop, you can expect to find tea there. So one may anticipate a few things, just by knowing what is this address to?
+
+A mutable reference is like a postcard with address written with pencil, where anyone can . An immutable reference is one, which once constructed, can't change what it points to.
+
+Theoretically, references can be mutable at typelevel and at instance level.
 ** Option
 ** Algebra
 From Wikipedia
@@ -17,26 +92,58 @@ In its most general form, algebra is the study of mathematical symbols and the r
 ** ADT
 Algebraic Data Type.
 
+** Object Construction
 
-
+** Pattern Matching
 * Our Creation
-Algebras are fabricated. That might be debatable. But 
+Algebras are fabricated. That might be debatable. Gamers could argue that they are fabricated. Scientists could argue they're discovered. 
 
 Until someone sees that pattern, and codifies it in an algebra. Someone saw a pattern in the ways we've been doing error handling all along, and codified it in the /Option/ algebra.
 
 * Instructions. Data.
-It helps to see the difference in essence implied. Computation, itself, has these two primitives. Any object in the computation (the abstract information science only, ie, only software) domain, is either an instruction or data. Or both/none?
+It helps to see the difference-in-essence, implied. Computation, itself, has these two primitives. Any object in the computation (the abstract information science only, ie, only software) domain, is either an instruction or data. Or both/none?
 
 We can even see instructions as data. That is what a function-value is. It's upto our contextual interpretation to see that implied difference and act accordingly.
 
-* Rock, Paper, Scissor!
-We can interpret this game as an algebra. In this domain, we have defined some primitve objects and the RPS world is constructed on those primitives.
+* Formalization and interfaces
 
-As another example, the game of Chess. It has its primitives. There are primitive pieces, and then there are interaction rules between them. A pawn can only move like this, and a queen like this.
-
-In the RPS algebra, we have Rock, Paper, Scissor as primitive data, and the interaction between them as primitive instructions. So what are the primitive interactions between these domain objects. Well, just one, /against/. 
-
-And then there are rewrite rules. Rock /against/ Paper means Paper. And so on.
-
-** Algebras interact
+* Algebras can interact
 This RPS algebra can be programmed to interact with say, a betting algebra, where some friends pool in money and define some rules for disbursing rewards.
+
+So wait a minute.
+
+* And Computations can fail
+And then, for a sound system, we are supposed to have an alternative at the outset for what to do when computations fail.
+
+Normally, we would do try-catch. But the someone saw a consistent pattrn in try catch. Or they saw an algebra. Saw the grammar guiding constructions in this domain.
+
+If I dispatch someone to get back the height of a nearby tree,
+
+
+
+* Constructing the /Option/ algebra
+Our first focus are the primitve values in this domain. 
+
+There's a function `def f(x:Double,y:Double):Double = x/y` It represents a comptation which will fail at 0. So f is not a total function. We need to make it a total function to reap the benefits of functional programming.
+
+We need to be more precise. Even if that single data point, is such infinitely outnumbered against all the other numbers, for the sake of mathematical purity, we need to say it is exactly what it is.
+
+What if we could say that it is an optional double value? Sometimes we will get the value and sometimes we won't.
+
+** Think about it
+But can this optional algebra work directly with values of a raw
+
+
+* Primitive methods.
+Now enteres the animative force. Data was lifeless, for the symbol was born dead. 
+
+The instruction is dead in itself but still creates life.
+
+So, now we have an address to an optional value, let's say Option[Utensil], a formalized way to express, an optional utensil. What can we do with an address?
+
+** Scene, food
+Your friend brings in some food. And you need a plate to eat. You have an address to a plate. Also, you're not sure if there's a clean plate in the kitchen, as you're doubtful of the last cleaninig efforts. so you think, what I really have, is an address to an optional plate. Which might or might not be there.
+
+You remember that the kitchen might have a clean plate, as you are doubtful of the last cleaning efforts.
+
+So, we want to go to the address
