@@ -2,26 +2,42 @@
 The algebra of error handling.
 -----------------------------
 
-/Option/ is something understood intuitively thus, if I have an option of something, eventually, either i'll have it or not.
+/Option/ is something understood intuitively thus, if we have an option of something, eventually, either we'll have it or not.
 
 But what is /Algebra/?
+
 
 * Algebra
 From Wikipedia
 
 /In its most general form, algebra is the study of mathematical symbols and the rules for manipulating these symbols;/
 
-Read that atleast thrice and let it sink in.
+Let that sink in.
+
+** Study
+We study. So that we can grasp those things, put them in our head, replay them, wind/rewind/unwind them, mix them with other things we study, and create and carry on the activity of consciousness.
+
 
 ** What is a symbol?
-We, collectively, evolve a symbol and agree on it to signify something, eg, `1` is a (written) symbol first, a number afterwards; `+` is a (written) symbol first. And it means addition on numbers, afterwards. Same goes for the sound we make for `1` and `+`, which are symbols made through sound. And so on. 
+For example, imagine an infinite whiteness. There's the most perfect continuity. No disturbances, no aberrations. Then suddenly appears a mark. And that's a symbol.
 
-Symbols get together to form newer symbols, and we assign newer meanings to newer symbols. How about `+1` or `1+` ?
+We, collectively, evolve symbols and agree on them to signify some things, eg, `1` is a (written) symbol first, a number afterwards; `+` is a (written) symbol first. And it means addition on numbers, afterwards. Same goes for the sound we make for `1` and `+`, which are symbols made through sound. Which are symbols first and their meaning afterwards. 
+
+Symbols get together, compound, to form newer symbols, and we assign newer meanings to newer symbols. How about `+1` or `1+` ? Or `1+1`? Or `=`?
 
 ** What is a rule?
-In arithmetic, /+/ is a rule. It's a primitive method.
+We'll use the symbol 'method' in place of 'rule'. In arithmetic, /+/ is a rule. It's a primitive method on numbers and arguably the simplest of the thing we can do with two numbers.
 
-Let's see some example algebras. 
+If you bring methods in the company of symbols, manipulation comes to life. It manipulates symbols. It enthuses activity in the rather lifeless world of symbols only.
+
+The usage of methods might impose some requirements on symbols. I can't add goats in my herd until I get some more from somewhere else, maybe my wife's father is generous enough to give me some. But here, it doesn't matter the order in which they're added to their keep. Doesn't matter which group goes in first, or whether they goes together.
+
+Archetypical symbols in a domain are those, which can't be represented in terms of another. Orthogonality connotes to the same thing.
+
+*** Methods come to have their own properties
+
+
+* Example Algebras. 
 
 ** Geometry - Algebra of Shapes, Sizes, Spatial Locations & Forms
 "the branch of mathematics concerned with the properties and relations of points, lines, surfaces, solids, and higher dimensional analogues."
@@ -30,25 +46,61 @@ Let's see some example algebras.
 "the branch of mathematics dealing with the properties and manipulation of numbers"
 
 ** Rock, Paper, Scissors! - A fabricated algebra
-We can see this game as an algebra. Then we see what goes in the construction of an algebra, and if we already have an algebra construction, we can understand it by its symbols and rules.
+We can see a game as an algebra. Then we see what goes in the construction of an algebra, and if we already have an algebra construction, we can study it by its symbols and rules.
 
 To fabricate the RPS world, we have Rock, Paper, Scissors as the primitive symbols, and the interaction between them as primitive methods. So what are the primitive interactions between these domain objects. Well, just one, /against/. And all the animation in this world is brought about this one method.
 
 In this algebra, we have defined some primitve symbols and the RPS world is constructed on those primitives.
 
-As another example, the game of Chess. It has its primitives. There are primitive pieces, and then there are interaction rules between them. A pawn can only move like this, and a queen like this.
+And then there are rewrite rules. Rock /against/ Paper means Paper. And so on. It doesn't matter 
+Notice that the /against/ method doesn't do domain transformation here. As, say the /burn/ method does domain transformation on combustible substances, ie after being burn, they're not combustibles anymore. Methods give us the ability to do (or not do) domain transformation.
 
-And then there are rewrite rules. Rock /against/ Paper means Paper. And so on.
+*** Commutatitivity & Associatitivity
+Paper wins in Rock /against/ Paper. Paper also wins in Paper /against/ Rock. So the order in which Rock and Paper appear in an /against/ operation doesnt' matter. Such an operation is called commutative.
+
+But let's say now, three hands appear. Do we say that one /against/ should be able to work with three primitive symbols? Or do we chain the against operation? Well depends on the domain designers. If they want to have former, they'll have to just specify what happens in such a scenario, and others like this.
+
+If they want to have the latter, the order of method application starts to matter.
+
+Rock /against/ Paper /against/ Scissors. 
+
+---
+
+As another example, the game of Chess. It has its primitives. There are primitive pieces, and then there are interaction rules between them. A pawn can only move like this, and a queen like this.
 
 And then what might a /Data Type/ be?
 
 
 * Data Type
 
+** Type
+In scalaland
+
+One way to think about /Type/ is as a collection of properties provable about objects of that type. So a type is a collection of contracts. Things that hold for 1 object of type T, hold for all objects of type T, and all objects of any arbitrary subtype of T.
+
+That's how we define 'subtype'. A subtype must implement all the contracts of its supertype. And then they also have their space to implement additional things.
+
+*** Tree of Life
+One of the already crafted out examples and a canonical implementation of a type hierarchy is the tree of life itself.
+
+When we think about 'living thing' as a 'type' , it exists only as one of its several forms. But 'living thing' itself is abstract, and only materializes as a subtype. So a bird is a 'living thing' as are we. Compare this to the type 'homo sapien' which can exists as itself, and also as one of its subtypes like 'autistic homo sapien'.
+
+
+*** Wardrobe
+So there are certain basic things that a /wardrobe data type/ must fulfil, for it to be identified as one.
+
+
+
 * Data Structure
+
+For example, a wardrobe is a data structure. It exists because we could factor out a pattern that made dealing with objects of a certain type, easy. Ease of accessibility, usage, designed specifically out, for a usage pattern.
+
+So later, we'll think about our option type as a structure, with some accesibility patterns available on objects of option type.
+
 
 * Level -1
 We rely on the following primitive definitions:
+
 
 ** Primitive
 Primitive connotes to the atomic / undivisible things in a domain.
@@ -62,16 +114,8 @@ Symbols in a lower layer, are parents to those in the higher layer.
 
 ** Interface / Implementation
 
-
-** Type
-Type is a collection of contracts. Things that hold for 1 object of type T, hold for all objects of type T, and all objects of any arbitrary subtype of T.
-
-So a subtype must implement all the contracts of its supertype. And then they also have their space to implement additional things.
-
 ** Object
 First of all, it really not that impossible to bend our interpretation so some arbitrary thing, as some another arbitrary thing. EG, life is like a wind, or say life is like a tree. A type is an object in one perspective and the other way around in another.
-
-
 
 
 
@@ -83,6 +127,10 @@ So if I give you my address, you can expect to find me there. And if I give an a
 A mutable reference is like a postcard with address written with pencil, where anyone can . An immutable reference is one, which once constructed, can't change what it points to.
 
 Theoretically, references can be mutable at typelevel and at instance level.
+
+Think about going to a reference as opening a door. When you have the reference, you can get to the door. When you evaluate that reference, means you open it. If you don't evaluate it and pass it as such, think that you don't open the door, but you still can give this address to this door to someone else.
+
+
 ** Option
 ** Algebra
 From Wikipedia
@@ -95,22 +143,27 @@ Algebraic Data Type.
 ** Object Construction
 
 ** Pattern Matching
+
+
 * Our Creation
 Algebras are fabricated. That might be debatable. Gamers could argue that they are fabricated. Scientists could argue they're discovered. 
 
 Until someone sees that pattern, and codifies it in an algebra. Someone saw a pattern in the ways we've been doing error handling all along, and codified it in the /Option/ algebra.
+
 
 * Instructions. Data.
 It helps to see the difference-in-essence, implied. Computation, itself, has these two primitives. Any object in the computation (the abstract information science only, ie, only software) domain, is either an instruction or data. Or both/none?
 
 We can even see instructions as data. That is what a function-value is. It's upto our contextual interpretation to see that implied difference and act accordingly.
 
+
 * Formalization and interfaces
 
 * Algebras can interact
 This RPS algebra can be programmed to interact with say, a betting algebra, where some friends pool in money and define some rules for disbursing rewards.
 
-So wait a minute.
+So wait a minute. So what if we change our perspective and zoom out, where we see these distinct algebras as primitive symbols, and the interaction between them as primitive methods?
+
 
 * And Computations can fail
 And then, for a sound system, we are supposed to have an alternative at the outset for what to do when computations fail.
@@ -147,3 +200,4 @@ Your friend brings in some food. And you need a plate to eat. You have an addres
 You remember that the kitchen might have a clean plate, as you are doubtful of the last cleaning efforts.
 
 So, we want to go to the address
+
